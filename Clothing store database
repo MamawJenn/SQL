@@ -1,0 +1,33 @@
+--Create a clothing store database
+
+CREATE TABLE outerwear(id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, section TEXT);
+
+INSERT INTO outerwear VALUES(1, "hoodies", 15, 10, "light weight jackets");
+INSERT INTO outerwear VALUES(2, "rain jackets", 23, 17, "rain gear");
+INSERT INTO outerwear VALUES(10, "ski jackets", 27, 35, "ski goodies");
+INSERT INTO outerwear VALUES(16, "ski gloves", 17, 25, "ski goodies");
+INSERT INTO outerwear Values(3, "fleece front zip jackets", 30, 10, "light weight jackets");
+INSERT INTO outerwear Values(4, "ski boots", 20, 40, "ski goodies");
+INSERT INTO outerwear VALUES(5, "rain boots", 17, 15, "rain gear");
+INSERT INTO outerwear VALUES(6, "hiking boots", 26, 35, "going hiking");
+INSERT INTO outerwear VALUES(7, "fleece lined gloves", 25, 12, "accessorise");
+INSERT INTO outerwear VALUES(8, "leather gloves", 31, 20, "accessories");
+INSERT INTO outerwear VALUES(9, "leather jacket", 18, 35, "here to keep you warm");
+INSERT INTO outerwear VALUES(11, "heated vest", 17, 26, "here to keep you warm");
+INSERT INTO outerwear Values(12, "beanies", 32, 8, "accessories"); 
+INSERT INTO outerwear VALUES(13, "ski goggles", 17, 15, "ski goodies");
+INSERT INTO outerwear VALUES(14, "rain ponchos", 35, 2, "rain gear");
+INSERT INTO outerwear Values(15, "heated jackets", 22, 38, "here to keep you warm");
+INSERT INTO outerwear Values(17, "rechargeable battery for heated jacket/vest", 42, 25, "accessories");
+
+-- display the database ordered by price
+SELECT * FROM outerwear ORDER BY price;
+
+
+SELECT name, quantity, price FROM outerwear ORDER BY price;
+
+
+SELECT name, price, SECTION FROM outerwear ORDER BY SECTION;
+
+
+SELECT sum(quantity) FROM outerwear;
